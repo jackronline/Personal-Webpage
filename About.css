@@ -1,0 +1,496 @@
+/* Universal Styles */
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    width: 100%;
+    background-color: white;
+    color: black;
+}
+
+html {
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+}
+
+span {
+    color: red;
+}
+
+
+
+
+/* Header NAV */
+
+
+header {
+    position: fixed;
+    z-index: 105;
+    width: 100%;
+    height: 90px;
+    background-color: white;
+}
+
+header .content {
+    display: flex;
+    align-items: center;
+    padding: 2rem;
+}
+  
+header .logo {
+    flex: 1;
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 2.3rem;
+    padding-left: 2rem;
+}
+
+header nav ul {
+    display: flex;
+    padding-right: 2rem;
+}
+  
+  
+nav li {
+    padding-left: 3.5rem;
+}
+  
+nav a {
+    vertical-align: bottom;
+    line-height: 1.6;
+    font-size: 1.15rem;
+    font-family: "Urbanist", sans-serif;
+    border: solid white 2px;
+    padding: 2px 5px;
+    transition: border 0.2s ease-in;
+}
+
+nav a:hover {
+    border: solid red 2px;
+    transition: border 0.3s ease-in;
+}
+
+nav .current_tab {
+    color: red;
+    text-decoration: underline;
+}
+
+
+
+
+/* HEADER HERO */
+
+
+.header_hero {
+    width: 100%;
+    height: 800px;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.header_hero_content {
+    width: 80%;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    display: inline-flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    column-gap: 20px;
+    padding: 0 4.5rem;
+}
+
+.header_photo_wrapper {
+    width: 400px;
+    height: 520px;
+    overflow: hidden;
+    border-radius: 50px;
+    z-index: 100;
+    box-shadow: 5px 5px rgb(220, 220, 220);
+    margin-top: 0.5rem;
+}
+
+.header_photo_wrapper:hover {
+    box-shadow: 5px 5px red;
+}
+
+.header_photo_wrapper img {
+    width: 400px;
+    height: 520px;
+    opacity: 80%;
+}
+
+
+.header_text_wrapper {
+    width: 450px;
+    height: 500px;
+    text-align: left;
+    padding-top: 50px;
+}
+
+
+/* TYPEWRITER EFFECT ON HEADER */
+.typewriter h1 {
+    border-right: .15em solid red;
+    font-family: "Bebas Neue";
+    font-size: 5.5rem;
+    white-space: nowrap;
+    overflow: hidden;
+    margin-bottom: 0.75rem;
+  }
+  .typewriter h1:nth-child(1) {
+    width: 2.2em;
+    opacity: 0;
+    -webkit-animation: type3 1.5s steps(40, end), blink .5s step-end infinite alternate;
+    animation: type3 1.5s steps(40, end), blink .5s step-end infinite alternate;
+    -webkit-animation-delay: .2s;
+    animation-delay: .1s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+  }
+
+  @keyframes type3 {
+    0% {
+      width: 0;
+    }
+    1% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  @-webkit-keyframes type3 {
+    0% {
+      width: 0;
+    }
+    1% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes blink {
+    50% {
+      border-color: transparent;
+    }
+  }
+  @-webkit-keyframes blink {
+    50% {
+      border-color: tranparent;
+    }
+  }
+
+.header_text_wrapper .sub-header {
+    font-size: 1.5rem;
+}
+
+.header_text_wrapper p {
+    font-family: "Urbanist", sans-serif;
+    font-size: 1rem;
+    font-weight: 300;
+    margin-top: 1.5rem;
+    text-align: justify;
+    line-height: 1.5rem;
+}
+
+.about_button {
+    color: red;
+    border: solid red 3px;
+    width: 230px;
+    height: 60px;
+    font-family: "Urbanist";
+    margin-top: 1.5rem;
+    text-align: center;
+    align-content: center;
+    animation: fadeIn 2.5s both;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: inset 0 0 0 0 #a90101;
+    -webkit-transition: ease-out 0.4s;
+    -moz-transition: ease-out 0.4s;
+    transition: box-shadow ease-out 0.4s;
+}
+
+
+@keyframes fadeIn {
+    0% {
+      opacity: 0%;
+    }
+    
+    100% {
+      opacity: 100%;
+    }
+}
+
+
+.slide_right:hover {
+    box-shadow: inset 400px 0 0 0 red;
+    color: white;
+  }
+
+  .about:active {
+    font-size: 0.9rem;
+    border-color: white;
+  }
+
+
+
+
+
+
+  /* SERVICES TILES */
+
+  .services_section {
+    width: 100%;
+    height: 400px;
+    background-color: rgb(249, 248, 248);
+  }
+
+  .services_section h1 {
+    font-family: "Bebas Neue";
+    font-size: 2rem;
+    width: 270px;
+    padding-left: 70px;
+    padding-top: 25px;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+    justify-items: center;
+  }
+
+  .services_flex_wrapper {
+    width: 100%;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    display: inline-flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    column-gap: 20px;
+    padding: 0 9.3rem;
+  }
+
+  .card {
+    width: 375px;
+    height: 275px;
+    min-width: 300px;
+    min-height: 200px;
+    border-radius: 50px;
+    overflow: hidden;
+    background-color: rgb(67, 67, 67);
+  }
+
+  .card img {
+    width: 375px;
+    height: 275px;
+    opacity: 60%;
+    transition: width 0.2s ease-in, height 0.2s ease-in;
+  }
+
+  .card:hover img{
+    width: 385px;
+    height: 285px;
+    transition: width 0.2s ease-in, height 0.2s ease-in;
+    opacity: 40%;
+  }
+
+
+
+
+
+
+  /*BIO SECTION*/
+
+.nextsection {
+    position: relative;
+    width: 100%;
+}
+
+.bio_section {
+    width: 100%;
+    height: 580px;
+    background-color: white;
+}
+
+.story_wrapper {
+    display: inline-flex;
+    width: 100%;
+    align-items: center;
+    align-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    column-gap: 10px;
+    height: 400px;
+    padding-left: 4rem;
+    padding-right: 4rem;
+    margin-top: 2rem;
+}
+
+
+.story_wrapper p {
+    width: 550px;
+    height: 250px;
+    font-family: "Urbanist";
+    font-size: 1.2rem;
+    font-weight: 300;
+    text-align: left;
+    line-height: 1.7rem;
+    word-spacing: 4px;
+    margin-top: 2.5rem;
+}
+
+.story_wrapper img {
+    width: 400px;
+    height: 400px;
+    align-items: center;
+}
+
+
+
+
+  /* SKILLS SECTION */
+
+.skills_section {
+    width: 80%;
+    height: 430px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgb(239, 237, 237);
+    border-radius: 50px;
+  }
+
+
+.skills_wrapper {
+    display: inline-flex;
+    width: 100%;
+    align-items: center;
+    justify-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    height: 400px;
+    column-gap: 15px;
+    padding-left: 4rem;
+    padding-right: 4rem;
+    margin-top: .2rem;
+}
+
+.skills_wrapper p {
+    width: 400px;
+    height: 230px;
+    font-family: "Urbanist";
+    font-size: 1.4rem;
+    font-weight: 300;
+    line-height: 2rem;
+    word-spacing: 4px;
+    background-color: transparent;
+    border-radius: 50px;
+}
+
+.skills_wrapper .left {
+  padding-left: 8.5rem;
+}
+
+.skills_wrapper .right {
+  padding-left: 4.5rem;
+}
+
+.skills_wrapper img {
+    width: 200px;
+    height: 230px;
+}
+
+
+
+
+
+
+
+
+
+
+/* FOOTER STYLING */
+
+.footer_container {
+  position: relative;
+  width: 100%;
+  height: 80px;
+  z-index: 100;
+  margin-bottom: 0;
+  padding-bottom: 0;
+  bottom: -1.1rem;
+  background-color: rgb(249, 248, 248);
+}
+
+
+.footer_text_wrapper {
+  position: relative;
+  margin-left: 4rem;
+  margin-top: 2.1rem;
+  width: 200px;
+  top: 2rem;
+}
+
+.footer_text_wrapper p {
+  font-size: 0.8rem;
+  font-family: "Urbanist", sans-serif;
+  color: black;
+}
+
+
+.footer_links_wrapper {
+  float: right;
+  padding-right: 4rem;
+}
+
+
+/* Style all font awesome icons */
+.fa {
+  padding: 20px;
+  font-size: 50px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+}
+
+/* Add a hover effect if you want */
+.fa:hover {
+  opacity: 0.7;
+  color: red;
+}
+
+
+/* Set a specific color for each brand */
+
+/* Facebook */
+.fa-facebook {
+  background-color: transparent;
+  color: black;
+}
+
+/* Twitter */
+.fa-instagram {
+  background-color: transparent;
+  color: black;
+}
+
+.fa-linkedin {
+  background-color: transparent;
+  color: black;
+}
+
